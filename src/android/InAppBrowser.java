@@ -1216,8 +1216,7 @@ public class InAppBrowser extends CordovaPlugin {
             }else if(beforeload.equals("get") && (method == null || method.equals("GET"))){
                 useBeforeload = true;
             }else if(beforeload.equals("post") && (method == null || method.equals("POST"))){
-                //TODO handle POST requests
-                errorMessage = "beforeload doesn't yet support POST requests";
+                useBeforeload = true;
             }
 
             // On first URL change, initiate JS callback. Only after the beforeload event, continue.
